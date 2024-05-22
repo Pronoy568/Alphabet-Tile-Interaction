@@ -1,0 +1,61 @@
+.App {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+.tile {
+  border: 2px solid rgb(216, 230, 248);
+  background: rgb(241, 241, 241);
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.tile:hover {
+  background-color: #cfcfcf;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#outputString {
+  margin-top: 20px;
+  font-size: 24px;
+  border: 2px solid lightgray;
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+@media (max-width: 600px) {
+  .tile {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  #outputString {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .tile {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  #outputString {
+    font-size: 18px;
+  }
+}
